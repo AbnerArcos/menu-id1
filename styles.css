@@ -126,20 +126,12 @@ body{
   position:fixed;
   width:65px;
   height:65px;
-  background:#111827;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:26px;
-  cursor:grab;
-  box-shadow:0 8px 20px rgba(0,0,0,0.25);
-  z-index:1000;
-  top:70%;
-  left:80%;
-  user-select:none;
+  bottom:90px;
+  right:20px;
+  top:auto;
+  left:auto;
 }
+
 
 .floating-cart:active{
   cursor:grabbing;
@@ -510,4 +502,3 @@ body{
 body{
   overscroll-behavior: contain;
 }
-

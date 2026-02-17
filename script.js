@@ -252,46 +252,48 @@ document.addEventListener("DOMContentLoaded", function(){
       confirmModal.style.display = "none";
   });
 
-  /* ================= DRAG CARRITO ================= */
+/* ================= DRAG CARRITO ================= */
 
-  let isDragging = false;
-  let offsetX = 0;
-  let offsetY = 0;
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
 
-  floatingCart.addEventListener("mousedown", (e)=>{
-    isDragging = true;
-    offsetX = e.clientX - floatingCart.offsetLeft;
-    offsetY = e.clientY - floatingCart.offsetTop;
-  });
+/* DESKTOP */
+floatingCart.addEventListener("mousedown", (e)=>{
+  isDragging = true;
+  offsetX = e.clientX - floatingCart.offsetLeft;
+  offsetY = e.clientY - floatingCart.offsetTop;
+});
 
-  document.addEventListener("mousemove", (e)=>{
-    if(isDragging){
-      floatingCart.style.left = (e.clientX - offsetX) + "px";
-      floatingCart.style.top = (e.clientY - offsetY) + "px";
-    }
-  });
+document.addEventListener("mousemove", (e)=>{
+  if(!isDragging) return;
 
-  document.addEventListener("mouseup", ()=>{
-    isDragging = false;
-  });
+  floatingCart.style.left = (e.clientX - offsetX) + "px";
+  floatingCart.style.top = (e.clientY - offsetY) + "px";
+});
 
-  document.addEventListener("touchstart", (e)=>{
-    isDragging = true;
-    offsetX = e.touches[0].clientX - floatingCart.offsetLeft;
-    offsetY = e.touches[0].clientY - floatingCart.offsetTop;
-  }, { passive:false });
+document.addEventListener("mouseup", ()=>{
+  isDragging = false;
+});
 
-  document.addEventListener("touchmove", (e)=>{
-    if(isDragging){
-      e.preventDefault();
-      floatingCart.style.left = (e.touches[0].clientX - offsetX) + "px";
-      floatingCart.style.top = (e.touches[0].clientY - offsetY) + "px";
-    }
-  }, { passive:false });
+/* CELULAR — SOLO EN EL CARRITO */
+floatingCart.addEventListener("touchstart", (e)=>{
+  isDragging = true;
+  offsetX = e.touches[0].clientX - floatingCart.offsetLeft;
+  offsetY = e.touches[0].clientY - floatingCart.offsetTop;
+}, { passive:true });
 
-  document.addEventListener("touchend", ()=>{
-    isDragging = false;
-  });
+floatingCart.addEventListener("touchmove", (e)=>{
+  if(!isDragging) return;
+
+  floatingCart.style.left = (e.touches[0].clientX - offsetX) + "px";
+  floatingCart.style.top = (e.touches[0].clientY - offsetY) + "px";
+
+}, { passive:true });
+
+floatingCart.addEventListener("touchend", ()=>{
+  isDragging = false;
+});
 
   updateCartUI();
 
