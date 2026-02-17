@@ -178,7 +178,7 @@ body{
   user-select:none;
   border:2px solid #e5e7eb;
 
-  touch-action: none; /* 🔥 evita scroll automático */
+
 }
 /* ================= MODAL ================= */
 
@@ -504,3 +504,10 @@ body{
   margin:10px 0 15px 0;
   color:#374151;
 }
+.floating-cart{
+  touch-action: manipulation;
+}
+body{
+  overscroll-behavior: contain;
+}
+
