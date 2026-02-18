@@ -55,7 +55,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   color: #000;
-  transition: 0.3s;
+  transition: none;
 }
 
 .tab.active {
@@ -181,7 +181,7 @@ h2 {
   background: rgba(0,0,0,0.4);
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s;
+  transition: none;
   z-index: 90;
 }
 
