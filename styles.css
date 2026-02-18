@@ -586,25 +586,6 @@ button {
   font-weight: 600;
 }
 
-.success-toast {
-  position: fixed;
-  bottom: 120px;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  background: #111;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-size: 14px;
-  opacity: 0;
-  transition: 0.3s ease;
-  z-index: 9999;
-}
-
-.success-toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
 
 .cart-note{
   font-size: 12px;
