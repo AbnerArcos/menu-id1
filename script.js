@@ -182,7 +182,7 @@ if (navigator.vibrate) {
       if (tab.dataset.target === currentActive) {
         tab.classList.add("active");
         tab.scrollIntoView({
-          behavior: "smooth",
+          behavior: "auto",
           inline: "center",
           block: "nearest"
         });
