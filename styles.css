@@ -331,7 +331,11 @@ textarea {
   transform: translateY(100%);
   transition: transform 0.4s ease;
   z-index: 2000;
+
+  display: flex;              /* 👈 AGREGA ESTO */
+  flex-direction: column;     /* 👈 AGREGA ESTO */
 }
+
 
 .cart-sheet.active {
   transform: translateY(0);
@@ -347,10 +351,11 @@ textarea {
 }
 
 .cart-sheet-content {
-  flex: 1;
+  flex: 1;                /* 👈 ESTO HACE QUE OCUPE TODO EL ESPACIO */
   overflow-y: auto;
   padding: 15px;
 }
+
 .cart-item {
   position: relative;
   background: #fff;
@@ -479,6 +484,21 @@ button {
 
 
 
+.cart-whatsapp {
+  padding: 16px;
+  border-top: 1px solid #eee;
+  background: white;
+}
 
 
-
+#sendWhatsApp {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: #25D366;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}

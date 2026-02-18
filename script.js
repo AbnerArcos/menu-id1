@@ -25,6 +25,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cartSheet = document.getElementById("cartSheet");
   const cartSheetContent = document.getElementById("cartSheetContent");
+// ===============================
+// ENVIAR A WHATSAPP
+// ===============================
+document.getElementById("sendWhatsApp")
+  .addEventListener("click", () => {
+
+    if (cart.length === 0) return;
+
+    let message = "Hola, quiero hacer el siguiente pedido:%0A%0A";
+
+    let total = 0;
+
+    cart.forEach(item => {
+      const subtotal = item.price * item.quantity;
+      total += subtotal;
+
+      message += `• ${item.name} x${item.quantity} - ${subtotal}€%0A`;
+    });
+
+    message += `%0A*Total: ${total}€*`;
+
+    const phoneNumber = "529811064643"; // ← CAMBIA ESTO POR TU NÚMERO
+
+    const url =
+      `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(url, "_blank");
+});
 
   let quantity = 1;
   let currentActive = "";
