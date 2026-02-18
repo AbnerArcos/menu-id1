@@ -467,11 +467,15 @@ textarea {
   background: #b58b63;
   color: white;
   transform: scale(1.05);
+}
 
-  button {
+/* Reset botones Android */
+button {
   -webkit-appearance: none;
   appearance: none;
 }
+
+
 
 
 
