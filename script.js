@@ -95,11 +95,18 @@ if (navigator.vibrate) {
     let total = 0;
 
     cart.forEach(item => {
-      const subtotal = item.price * item.quantity;
-      total += subtotal;
+  const subtotal = item.price * item.quantity;
+  total += subtotal;
 
-      message += `• ${item.name} x${item.quantity} - ${subtotal} MXN\n`;
-    });
+  message += `• ${item.name} x${item.quantity} - ${subtotal} MXN`;
+
+  if (item.note && item.note.trim() !== "") {
+    message += `\n   Nota: ${item.note}`;
+  }
+
+  message += `\n`;
+});
+
 
     message += `\nTotal: ${total} MXN`;
 
@@ -237,43 +244,53 @@ if (navigator.vibrate) {
   }
 }
 
+// ===============================
+// AGREGAR AL CARRITO
+// ===============================
+document.querySelector(".add-cart-btn")
+  .addEventListener("click", () => {
 
-  // ===============================
-  // AGREGAR AL CARRITO
-  // ===============================
-  document.querySelector(".add-cart-btn")
-    .addEventListener("click", () => {
+    const price = parseFloat(
+      document.querySelector(
+        `.item[data-name="${modalName.textContent}"]`
+      ).dataset.price
+    );
 
-      const price = parseFloat(
-        document.querySelector(
-          `.item[data-name="${modalName.textContent}"]`
-        ).dataset.price
-      );
+    const noteValue = document
+      .getElementById("modalNotes")
+      .value
+      .trim();
 
-      const existing = cart.find(
-        item => item.name === modalName.textContent
-      );
+    const existing = cart.find(item =>
+      item.name === modalName.textContent &&
+      item.price === price &&
+      item.note === noteValue
+    );
 
-      if (existing) {
-        existing.quantity += quantity;
-      } else {
-        cart.push({
-          name: modalName.textContent,
-          image: modalImage.src,
-          price: price,
-          quantity: quantity
-        });
-      }
-	  
-	  // 📳 Vibración al agregar producto
-if (navigator.vibrate) {
-  navigator.vibrate(50);
-}
+    if (existing) {
+      existing.quantity += quantity;
+    } else {
+      cart.push({
+        name: modalName.textContent,
+        image: modalImage.src,
+        price: price,
+        quantity: quantity,
+        note: noteValue
+      });
+    }
 
+    // limpiar nota
+    document.getElementById("modalNotes").value = "";
 
-      updateCartBar();
-      closeModal();
-    });
+    // vibración
+    if (navigator.vibrate) {
+      navigator.vibrate(50);
+    }
+
+    updateCartBar();
+    closeModal();
+});
+
 
   // ===============================
   // ACTUALIZAR BARRA INFERIOR
@@ -341,9 +358,11 @@ if (navigator.vibrate) {
         <div class="cart-item-inner">
           <img src="${product.image}" />
           <div>
-            <div>${product.name}</div>
-            <small>${product.price}€</small>
-          </div>
+  <div>${product.name}</div>
+  <small>${product.price}€</small>
+  ${product.note ? `<div class="cart-note">📝 ${product.note}</div>` : ""}
+</div>
+
           <div class="cart-controls">
             ${
               product.quantity > 1
