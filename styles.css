@@ -19,7 +19,7 @@ body {
   background: #f9f7f4;
   border-radius: 26px 26px 0 0;
   padding: 18px;
-  min-height: 100vh;
+  min-height: 100px;
 }
 
 
@@ -477,6 +477,7 @@ textarea {
 html, body {
   overflow-x: hidden;
 }
+
 
 
 
