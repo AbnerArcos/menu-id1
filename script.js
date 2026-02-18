@@ -30,13 +30,56 @@ const sheetTotal = document.getElementById("sheetTotal");
 // ===============================
 // ENVIAR A WHATSAPP
 // ===============================
+
+
+const confirmModal = document.getElementById("confirmModal");
+const confirmItems = document.getElementById("confirmItems");
+const confirmTotal = document.getElementById("confirmTotal");
+
 document.getElementById("sendWhatsApp")
   .addEventListener("click", () => {
 
     if (cart.length === 0) return;
 
-    let message = "Hola, quiero hacer el siguiente pedido:%0A%0A";
+    confirmItems.innerHTML = "";
 
+    let total = 0;
+
+    cart.forEach(item => {
+
+      const subtotal = item.price * item.quantity;
+      total += subtotal;
+
+      const div = document.createElement("div");
+      div.classList.add("confirm-item");
+
+      div.innerHTML = `
+        <img src="${item.image}" />
+        <div>
+          <div>${item.name}</div>
+          <small>${item.quantity} x ${item.price}€</small>
+        </div>
+        <div style="margin-left:auto;font-weight:bold;">
+          ${subtotal}€
+        </div>
+      `;
+
+      confirmItems.appendChild(div);
+    });
+
+    confirmTotal.textContent = `${total}€`;
+
+    confirmModal.classList.add("active");
+});
+document.getElementById("cancelConfirm")
+  .addEventListener("click", () => {
+    confirmModal.classList.remove("active");
+});
+
+document.getElementById("confirmSend")
+  .addEventListener("click", () => {
+
+    let message = "Hola, quiero hacer el siguiente pedido:%0A%0A";
     let total = 0;
 
     cart.forEach(item => {
@@ -48,13 +91,16 @@ document.getElementById("sendWhatsApp")
 
     message += `%0A*Total: ${total}€*`;
 
-    const phoneNumber = "529811064643"; // ← CAMBIA ESTO POR TU NÚMERO
+    const phoneNumber = "529811064643";
 
     const url =
       `https://wa.me/${phoneNumber}?text=${message}`;
 
     window.open(url, "_blank");
+
+    confirmModal.classList.remove("active");
 });
+
 
   let quantity = 1;
   let currentActive = "";

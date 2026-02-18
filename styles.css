@@ -512,3 +512,76 @@ button {
   font-weight: 600;
   color: #333;
 }
+/* =========================
+   CONFIRM MODAL
+========================= */
+
+.confirm-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 3000;
+}
+
+.confirm-modal.active {
+  display: flex;
+}
+
+.confirm-content {
+  background: white;
+  width: 100%;
+  max-height: 80%;
+  border-radius: 24px 24px 0 0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.confirm-content h3 {
+  margin-bottom: 15px;
+}
+
+.confirm-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.confirm-item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.confirm-total {
+  font-weight: bold;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#cancelConfirm {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #eee;
+}
+
+#confirmSend {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #25D366;
+  color: white;
+  font-weight: 600;
+}
