@@ -469,4 +469,8 @@ textarea {
   color: white;
   transform: scale(1.05);
 }
+html, body {
+  overflow-x: hidden;
+}
+
 
