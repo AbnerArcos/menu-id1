@@ -611,7 +611,3 @@ button {
 button:active {
   transform: scale(0.95);
 }
-cartBar.style.transform = "scale(1.05)";
-setTimeout(() => {
-  cartBar.style.transform = "scale(1)";
-}, 150);
