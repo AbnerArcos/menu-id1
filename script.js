@@ -101,7 +101,7 @@ if (navigator.vibrate) {
   message += `• ${item.name} x${item.quantity} - ${subtotal} MXN`;
 
   if (item.note && item.note.trim() !== "") {
-    message += `\n   Nota: ${item.note}`;
+    message += `\n  📝 Nota: ${item.note}`;
   }
 
   message += `\n`;
