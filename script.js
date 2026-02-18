@@ -386,6 +386,36 @@ if (navigator.vibrate) {
             });
         });
       }
+	  // ===============================
+// CERRAR SWIPE ARRASTRANDO DERECHA
+// ===============================
+
+let startX = 0;
+let isDragging = false;
+
+const inner = item.querySelector(".cart-item-inner");
+
+inner.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+});
+
+inner.addEventListener("touchend", (e) => {
+
+  if (!item.classList.contains("swiped") || !isDragging) return;
+
+  const endX = e.changedTouches[0].clientX;
+  const diff = endX - startX;
+
+  // 👉 Si arrastra más de 60px hacia la derecha
+  if (diff > 60) {
+    item.classList.remove("swiped");
+  }
+
+  isDragging = false;
+});
+
+
 
       cartSheetContent.appendChild(item);
     });
