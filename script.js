@@ -40,6 +40,12 @@ document.getElementById("sendWhatsApp")
   .addEventListener("click", () => {
 
     if (cart.length === 0) return;
+	
+	// 📳 Vibración leve
+if (navigator.vibrate) {
+  navigator.vibrate(40);
+}
+
 
     confirmItems.innerHTML = "";
 
@@ -78,28 +84,46 @@ document.getElementById("cancelConfirm")
 
 document.getElementById("confirmSend")
   .addEventListener("click", () => {
+	  
+	  // 📳 Vibración confirmación fuerte
+if (navigator.vibrate) {
+  navigator.vibrate([80, 40, 80]);
+}
 
-    let message = "Hola, quiero hacer el siguiente pedido:%0A%0A";
+
+    let message = "Hola, quiero hacer el siguiente pedido:\n\n";
     let total = 0;
 
     cart.forEach(item => {
       const subtotal = item.price * item.quantity;
       total += subtotal;
 
-      message += `• ${item.name} x${item.quantity} - ${subtotal}€%0A`;
+      message += `• ${item.name} x${item.quantity} - ${subtotal} MXN\n`;
     });
 
-    message += `%0A*Total: ${total}€*`;
+    message += `\nTotal: ${total} MXN`;
 
     const phoneNumber = "529811064643";
 
     const url =
-      `https://wa.me/${phoneNumber}?text=${message}`;
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
 
+    // 🔥 VACIAR CARRITO
+    cart = [];
+    updateCartBar();
+    renderCart();
+
+    // Cerrar modales
     confirmModal.classList.remove("active");
+    cartSheet.classList.remove("active");
+
+    // 🔥 Mostrar mensaje
+    showSuccessMessage();
+
 });
+
 
 
   let quantity = 1;
@@ -240,6 +264,12 @@ document.getElementById("confirmSend")
           quantity: quantity
         });
       }
+	  
+	  // 📳 Vibración al agregar producto
+if (navigator.vibrate) {
+  navigator.vibrate(50);
+}
+
 
       updateCartBar();
       closeModal();
@@ -360,5 +390,26 @@ document.getElementById("confirmSend")
       cartSheetContent.appendChild(item);
     });
   }
+  
+  function showSuccessMessage() {
+
+  const msg = document.createElement("div");
+  msg.classList.add("success-toast");
+  msg.textContent = "✅ Pedido enviado correctamente";
+
+  document.body.appendChild(msg);
+
+  setTimeout(() => {
+    msg.classList.add("show");
+  }, 50);
+
+  setTimeout(() => {
+    msg.classList.remove("show");
+    setTimeout(() => {
+      msg.remove();
+    }, 300);
+  }, 2500);
+}
+
 
 });
