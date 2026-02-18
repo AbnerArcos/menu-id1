@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartImages = document.querySelector(".cart-images");
   const cartCount = document.getElementById("cartCount");
   const cartTotal = document.getElementById("cartTotal");
+const sheetTotal = document.getElementById("sheetTotal");
+
 
   const cartSheet = document.getElementById("cartSheet");
   const cartSheetContent = document.getElementById("cartSheetContent");
@@ -228,6 +230,8 @@ document.getElementById("sendWhatsApp")
       `${totalItems} producto${totalItems > 1 ? "s" : ""}`;
 
     cartTotal.textContent = `${totalPrice}€`;
+	sheetTotal.textContent = `${totalPrice}€`;
+
   }
 
   // ===============================

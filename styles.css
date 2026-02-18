@@ -485,6 +485,11 @@ button {
 
 
 .cart-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
   padding: 16px;
   border-top: 1px solid #eee;
   background: white;
@@ -492,8 +497,7 @@ button {
 
 
 #sendWhatsApp {
-  width: 100%;
-  padding: 14px;
+  padding: 14px 18px;
   border: none;
   border-radius: 14px;
   background: #25D366;
@@ -501,4 +505,10 @@ button {
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
+}
+
+.cart-total {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
 }
