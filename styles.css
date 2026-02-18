@@ -7,17 +7,21 @@
 
 body {
   background: #e9e4de;
-  display: flex;
-  justify-content: center;
-  padding: 30px 0;
+  margin: 0;
+  padding: 0;
 }
 
+
 .app {
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
   background: #f9f7f4;
-  border-radius: 26px;
+  border-radius: 26px 26px 0 0;
   padding: 18px;
+  min-height: 100vh;
 }
+
 
 /* HEADER */
 .header {
@@ -43,16 +47,16 @@ body {
 
 /* STICKY TABS */
 .tab {
-  flex: 0 0 auto;   /* IMPORTANTE */
+  flex: 0 0 auto;
   padding: 12px 20px;
   border-radius: 999px;
   border: none;
   background: transparent;
   font-weight: 500;
   cursor: pointer;
+  color: #000;
   transition: 0.3s;
 }
-
 
 .tab.active {
   background: #b58b63;
@@ -67,15 +71,7 @@ body {
 }
 
 /* BUTTONS */
-.tab {
-  flex: 1;
-  padding: 12px 0;
-  border-radius: 999px;
-  border: none;
-  background: transparent;
-  font-weight: 500;
-  cursor: pointer;
-}
+
 
 .tab.active {
   background: #b58b63;
@@ -473,3 +469,4 @@ textarea {
   color: white;
   transform: scale(1.05);
 }
+
