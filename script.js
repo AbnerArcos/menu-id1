@@ -177,17 +177,22 @@ if (navigator.vibrate) {
     });
 
     tabs.forEach(tab => {
-      tab.classList.remove("active");
+  tab.classList.remove("active");
 
-      if (tab.dataset.target === currentActive) {
-        tab.classList.add("active");
-        tab.scrollIntoView({
-          behavior: "smooth",
-          inline: "center",
-          block: "nearest"
-        });
-      }
+  if (tab.dataset.target === currentActive) {
+    tab.classList.add("active");
+
+    // Solo scroll horizontal del contenedor
+    const tabsContainer = document.querySelector(".tabs");
+    const tabLeft = tab.offsetLeft - (tabsContainer.offsetWidth / 2) + (tab.offsetWidth / 2);
+
+    tabsContainer.scrollTo({
+      left: tabLeft,
+      behavior: "smooth"
     });
+  }
+});
+
 
   });
 
