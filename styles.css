@@ -33,7 +33,7 @@ body {
 
 .header h1 {
   font-size: 20px;
-  color: #b58b63;
+  color: black;
   font-weight: 500;
 }
 
@@ -59,7 +59,7 @@ body {
 }
 
 .tab.active {
-  background: #b58b63;
+  background: #25D366;
   color: white;
 }
 
@@ -74,7 +74,7 @@ body {
 
 
 .tab.active {
-  background: #b58b63;
+  background: #25D366;
   color: white;
 }
 
@@ -119,7 +119,7 @@ h2 {
 .price {
   font-size: 13px;
   font-weight: 600;
-  color: #b58b63;
+  color: black;
 }
 /* TOP BAR STICKY */
 .top-bar {
@@ -168,7 +168,7 @@ h2 {
   height: 36px;
   border-radius: 50%;
   border: none;
-  background: #b58b63;
+  background: #25D366;
   color: white;
   font-size: 20px;
   cursor: pointer;
@@ -262,7 +262,7 @@ textarea {
 }
 
 .add-cart-btn {
-  background: #b58b63;
+  background: #25D366;
   color: white;
   border: none;
   padding: 12px 18px;
@@ -313,7 +313,7 @@ textarea {
 }
 
 .go-cart {
-  background: #b58b63;
+  background: #25D366;
   color: white;
   border: none;
   padding: 8px 14px;
@@ -436,14 +436,14 @@ textarea {
   border-radius: 50%;
   border: none;
   background: #f1ece6;
-  color: #b58b63;
+  color: black;
   font-size: 18px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 #closeCart:hover {
-  background: #b58b63;
+  background: black;
   color: white;
   transform: scale(1.05);
 }
@@ -460,7 +460,7 @@ textarea {
   border-radius: 50%;
   border: none;
   background: rgba(255,255,255,0.9);
-  color: #b58b63;
+  color: black;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -469,7 +469,7 @@ textarea {
 }
 
 .close-modal:hover {
-  background: #b58b63;
+  background: black;
   color: white;
   transform: scale(1.05);
 }
