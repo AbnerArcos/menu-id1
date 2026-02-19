@@ -63,10 +63,10 @@ if (navigator.vibrate) {
         <img src="${item.image}" />
         <div>
           <div>${item.name}</div>
-          <small>${item.quantity} x ${item.price}€</small>
+          <small>${item.quantity} x ${item.price}$</small>
         </div>
         <div style="margin-left:auto;font-weight:bold;">
-          ${subtotal}€
+          ${subtotal}$
         </div>
       `;
 
@@ -192,7 +192,6 @@ if (navigator.vibrate) {
     });
   }
 });
-
 
   });
 
@@ -327,8 +326,8 @@ document.querySelector(".add-cart-btn")
     cartCount.textContent =
       `${totalItems} producto${totalItems > 1 ? "s" : ""}`;
 
-    cartTotal.textContent = `${totalPrice}€`;
-	sheetTotal.textContent = `${totalPrice}€`;
+    cartTotal.textContent = `${totalPrice}$`;
+	sheetTotal.textContent = `${totalPrice}$`;
 
   }
 
@@ -364,7 +363,7 @@ document.querySelector(".add-cart-btn")
           <img src="${product.image}" />
           <div>
   <div>${product.name}</div>
-  <small>${product.price}€</small>
+  <small>${product.price}$</small>
   ${product.note ? `<div class="cart-note">📝 ${product.note}</div>` : ""}
 </div>
 
