@@ -157,8 +157,11 @@ h2 {
 
 /* Botón + flotante circular */
 .add-btn {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;      /* 🔥 evita que se haga ovalado */
+  min-height: 42px;
+
   border-radius: 50%;
   border: none;
   background: #b58b63;
@@ -166,8 +169,12 @@ h2 {
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s ease;
-  margin-left: auto; /* 👈 esto lo empuja a la derecha */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;       /* 🔥 CLAVE PRINCIPAL */
 }
 
 .add-btn:hover {
@@ -672,4 +679,11 @@ button {
 
 .add-btn {
   margin-left: auto;
+}
+
+.item-title,
+.price,
+.item-description {
+  flex: 1 1 auto;
+  min-width: 0; /* 🔥 evita que empujen al botón */
 }
