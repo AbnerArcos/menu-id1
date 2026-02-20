@@ -157,8 +157,6 @@ h2 {
 
 /* Botón + flotante circular */
 .add-btn {
-  position: absolute;
-  right: 14px;
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -169,6 +167,7 @@ h2 {
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s ease;
+  margin-left: auto; /* 👈 esto lo empuja a la derecha */
 }
 
 .add-btn:hover {
@@ -647,4 +646,30 @@ button {
 }
 .item-description {
   display: none;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.item-title,
+.price {
+  display: block;
+}
+
+.add-btn {
+  margin-left: auto;
 }
