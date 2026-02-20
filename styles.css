@@ -5,23 +5,29 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
 body {
   background: #e9e4de;
   margin: 0;
-  padding: 0;
+}
+
+/* WRAPPER PARA CENTRAR */
+.app-wrapper {
+  width: 100%;
 }
 
 
+/* APP CONTAINER */
 .app {
   width: 100%;
-  max-width: 360px;
-  margin: 0 auto;
+  max-width: 380px;
   background: #f9f7f4;
-  border-radius: 26px 26px 0 0;
-  padding: 18px;
-  min-height: 100%;
+  border-radius: 30px;
+  padding: 20px;
+  min-height: 100vh;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  position: relative;
 }
-
 
 /* HEADER */
 .header {
@@ -59,7 +65,7 @@ body {
 }
 
 .tab.active {
-  background: #25D366;
+  background: #b58b63;
   color: white;
 }
 
@@ -74,7 +80,7 @@ body {
 
 
 .tab.active {
-  background: #25D366;
+  background: #b58b63;
   color: white;
 }
 
@@ -88,40 +94,90 @@ h2 {
   margin-bottom: 14px;
 }
 
-/* ITEMS */
+/* =========================
+   GRID PRODUCTOS NUEVO
+========================= */
+
+.section {
+  display: block;
+  padding-top: 20px;
+}
+
+/* =========================
+   CARD HORIZONTAL ESTILO APP
+========================= */
+
 .item {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
   background: white;
+  border-radius: 22px;
   padding: 12px;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  margin-bottom: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  margin-bottom: 16px;
+  position: relative;
 }
 
-.item img {
-  width: 74px;
-  height: 74px;
-  border-radius: 12px;
+/* Imagen pequeña */
+.item-image img {
+  width: 75px;
+  height: 75px;
   object-fit: cover;
+  border-radius: 16px;
 }
 
-.item h3 {
+/* Título */
+.item-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Precio */
+.price {
   font-size: 14px;
   font-weight: 600;
+  margin-bottom: 4px;
 }
 
-.item p {
-  font-size: 12px;
-  color: #777;
-}
-
-.price {
+/* Descripción pequeña visible */
+.item-description {
+  display: block;
   font-size: 13px;
-  font-weight: 600;
-  color: black;
+  color: #777;
+  max-width: 180px;
 }
-/* TOP BAR STICKY */
+
+/* Ocultar divider y redes */
+.item-social,
+.divider {
+  display: none;
+}
+
+/* Botón + flotante circular */
+.add-btn {
+  position: absolute;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #b58b63;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.1);
+  background: #a1764f;
+}
+
+
+/* BOTÓN + FLOTANTE */
 .top-bar {
   position: sticky;
   top: 0;
@@ -148,6 +204,7 @@ h2 {
   background: white;
   border-radius: 999px;
 
+
   scrollbar-width: none;        /* Firefox */
 }
 
@@ -155,30 +212,12 @@ h2 {
   display: none;                /* Chrome */
 }
 
-/* BOTON + */
-.item {
-  position: relative;
-}
-
-.add-btn {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: none;
-  background: #25D366;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
 
 /* OVERLAY */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: transparent;
   opacity: 0;
   pointer-events: none;
   transition: none;
@@ -262,7 +301,7 @@ textarea {
 }
 
 .add-cart-btn {
-  background: #25D366;
+  background: #b58b63;
   color: white;
   border: none;
   padding: 12px 18px;
@@ -313,7 +352,7 @@ textarea {
 }
 
 .go-cart {
-  background: #25D366;
+  background: #b58b63;
   color: white;
   border: none;
   padding: 8px 14px;
@@ -591,4 +630,21 @@ button {
   font-size: 12px;
   color: #777;
   margin-top: 4px;
+}
+.top-bar {
+  position: sticky;
+  top: 0;
+  background: #f9f7f4;
+  z-index: 100;
+  padding-bottom: 12px;
+}
+
+.section {
+  padding-top: 20px;
+}
+.section h2 {
+  grid-column: 1 / -1;
+}
+.item-description {
+  display: none;
 }

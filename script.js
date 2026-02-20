@@ -73,7 +73,7 @@ if (navigator.vibrate) {
       confirmItems.appendChild(div);
     });
 
-    confirmTotal.textContent = `${total}€`;
+    confirmTotal.textContent = `${total}$`;
 
     confirmModal.classList.add("active");
 });
@@ -192,6 +192,7 @@ if (navigator.vibrate) {
     });
   }
 });
+
 
   });
 

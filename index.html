@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Menu AbnerDev</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -10,223 +10,381 @@
 </head>
 <body>
 
-<div class="app">
+<div class="app-wrapper">
 
-  <div class="top-bar">
-  <header class="header">
-    <h1>Menu AbnerDev</h1>
-  </header>
+  <div class="app">
 
- <div class="tabs">
-  <button class="tab active" data-target="breakfast">Breakfast</button>
-  <button class="tab" data-target="malteadas">Malteadas</button>
-  <button class="tab" data-target="helados">Helados</button>
-</div>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <header class="header">
+        <h1>Menu AbnerDev</h1>
+      </header>
 
-</div>
+      <div class="tabs">
+        <button class="tab active" data-target="breakfast">Breakfast</button>
+		<button class="tab" data-target="malteadas">Malteadas</button>
+		<button class="tab" data-target="helados">Helados</button>
+      </div>
+    </div>
+
+    <!-- BREAKFAST -->
+    <section id="breakfast" class="section">
+      <h2>Breakfast menu</h2>
+
+      <div class="item"
+        data-name="Waffle Classic"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/pancakes.jpg">
+
+        <div class="item-image">
+          <img src="img/pancakes.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Pancakes Clasicos</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Pancake Chocolate"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/pancakes2.jpg">
+
+        <div class="item-image">
+          <img src="img/pancakes2.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Pancakes Choco</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Pancakes platano"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/pancakes3.jpg">
+
+        <div class="item-image">
+          <img src="img/pancakes3.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Pancakes Platano</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Pancake Avena"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/pancakes4.jpg">
+
+        <div class="item-image">
+          <img src="img/pancakes4.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Pancakes Avena</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+    </section>
+	
+	<!-- BREAKFAST -->
+    <section id="malteadas" class="section">
+      <h2>Malteadas menu</h2>
+
+      <div class="item"
+        data-name="Malteada de chocolate"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/malteada.jpg">
+
+        <div class="item-image">
+          <img src="img/malteada.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Malteada choco</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Malteada de Fresa"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/malteada2.jpg">
+
+        <div class="item-image">
+          <img src="img/malteada2.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Malteada de fresa</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Malteada de Vainilla"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/malteada3.jpg">
+
+        <div class="item-image">
+          <img src="img/malteada3.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Malteada Vainilla</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Malteada de Oreo"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/malteada4.jpg">
+
+        <div class="item-image">
+          <img src="img/malteada4.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Malteada de Oreo</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+    </section>
 
 
-  <!-- BREAKFAST -->
-  <section id="breakfast" class="section">
-    <h2>Breakfast menu</h2>
+<!-- BREAKFAST -->
+    <section id="helados" class="section">
+      <h2>helados menu</h2>
 
-    <div class="item"
-     data-name="Classic Pancakes"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/pancakes.jpg">
+      <div class="item"
+        data-name="Helado de Vainilla"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/helado.jpg">
 
-  <img src="img/pancakes.jpg" alt="Pancakes">
+        <div class="item-image">
+          <img src="img/helado.jpg" alt="Waffle">
+        </div>
 
-  <div class="item-info">
-    <h3>Classic Pancakes</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
+        <h3 class="item-title">Helado de Vainilla</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Helados de chocolate"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/helado2.jpg">
+
+        <div class="item-image">
+          <img src="img/helado2.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Helado chocolate</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Helado de fresa"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/helado3.jpg">
+
+        <div class="item-image">
+          <img src="img/helado3.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Helado de fresa</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Helado de platano"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/helado4.jpg">
+
+        <div class="item-image">
+          <img src="img/helado4.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Helado platano</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">+</button>
+      </div>
+    </section>
+
+
   </div>
-  <button class="add-btn">+</button>
+
 </div>
 
-<div class="item"
-     data-name="Chocolate Pancakes"
-     data-description="Light chocolate pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/pancakes2.jpg">
 
-  <img src="img/pancakes2.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>Chocolate Pancakes</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<div class="item"
-     data-name="Banana Pancakes"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/pancakes3.jpg">
-
-  <img src="img/pancakes3.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>Banana Pancakes</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<div class="item"
-     data-name="Avena Pancakes"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/pancakes4.jpg">
-
-  <img src="img/pancakes4.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>Avena Pancakes</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<section id="malteadas" class="section">
-    <h2>Malteadas menu</h2>
-
-    <div class="item"
-     data-name="Classic malteada"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/malteada.jpg">
-
-  <img src="img/malteada.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>Classic malteada</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<div class="item"
-     data-name="strawberry malteada"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/malteada2.jpg">
-
-  <img src="img/malteada2.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>strawberry malteada</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<div class="item"
-     data-name="Vanilla malteada"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/malteada3.jpg">
-
-  <img src="img/malteada3.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>vanilla malteada</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<div class="item"
-     data-name="Oreo malteada"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/malteada4.jpg">
-
-  <img src="img/malteada4.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>Oreo malteada</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<section id="helados" class="section">
-    <h2>Helados menu</h2>
-
-    <div class="item"
-     data-name="Classic helado"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/helado.jpg">
-
-  <img src="img/helado.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>Classic helado</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<div class="item"
-     data-name="Chocolate helado"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/helado2.jpg">
-
-  <img src="img/helado2.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>Chocolate helado</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<div class="item"
-     data-name="strawberry helado"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/helado3.jpg">
-
-  <img src="img/helado3.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>strawberry helado</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
-
-<div class="item"
-     data-name="Banana helado"
-     data-description="Light classic pancakes, perfect to start your day."
-     data-price="8"
-     data-image="img/helado4.jpg">
-
-  <img src="img/helado4.jpg" alt="Pancakes">
-
-  <div class="item-info">
-    <h3>Banana helado</h3>
-    <p>Light classic pancakes, perfect to start your day.</p>
-    <div class="price">$8</div>
-  </div>
-  <button class="add-btn">+</button>
-</div>
 
 
 </section>
@@ -267,7 +425,7 @@
 
   <div class="cart-info">
     <span id="cartCount">0 productos</span>
-    <span id="cartTotal">0€</span>
+    <span id="cartTotal">0$</span>
   </div>
 
   <button id="goToCart" class="go-cart">Ver carrito</button>
@@ -283,7 +441,7 @@
   </div>
   <div class="cart-whatsapp">
   <div class="cart-total">
-    Total: <span id="sheetTotal">0€</span>
+    Total: <span id="sheetTotal">0$</span>
   </div>
 
   <button id="sendWhatsApp">enviar pedido por WhatsApp</button>
@@ -300,7 +458,7 @@
     <div id="confirmItems"></div>
 
     <div class="confirm-total">
-      Total: <span id="confirmTotal">0€</span>
+      Total: <span id="confirmTotal">0$</span>
     </div>
 
     <div class="confirm-buttons">
