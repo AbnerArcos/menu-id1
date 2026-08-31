@@ -1,35 +1,470 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sorteos baratos Abner</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Menu AbnerDev</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="hero">
-  <h1>Sorteos baratos Abner</h1>
-  <p> ¡Todos los boletos cuestan solo $1 MXN!</p>
-</header>
+<div class="app-wrapper">
 
-<section class="container">
+  <div class="app">
 
-  <h2>Sorteos disponibles</h2>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <header class="header">
+        <h1>Menu AbnerDev</h1>
+      </header>
 
-  <!-- BOTÓN GRANDE -->
- <a href="sorteos/index.html" class="big-btn">
-  <img src="premio.jpg" alt="Google Play" />
-  <div class="info">
-    <h3> Doble tarjetas Google Play</h3>
-    <p>2 tarjetas de $250 MXN c/u</p>
-    <span class="precio">🎟️ Boleto: $1 MXN</span>
+      <div class="tabs">
+        <button class="tab active" data-target="breakfast">Breakfast</button>
+		<button class="tab" data-target="malteadas">Malteadas</button>
+		<button class="tab" data-target="helados">Helados</button>
+      </div>
+    </div>
+
+    <!-- BREAKFAST -->
+    <section id="breakfast" class="section">
+      <h2>Breakfast menu</h2>
+
+      <div class="item"
+        data-name="Waffle Classic"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/pancakes.jpg">
+
+        <div class="item-image">
+          <img src="img/pancakes.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Pancakes Clasicos</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Pancake Chocolate"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/pancakes2.jpg">
+
+        <div class="item-image">
+          <img src="img/pancakes2.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Pancakes Choco</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Pancakes platano"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/pancakes3.jpg">
+
+        <div class="item-image">
+          <img src="img/pancakes3.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Pancakes Platano</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Pancake Avena"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/pancakes4.jpg">
+
+        <div class="item-image">
+          <img src="img/pancakes4.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Pancakes Avena</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+    </section>
+	
+	<!-- BREAKFAST -->
+    <section id="malteadas" class="section">
+      <h2>Malteadas menu</h2>
+
+      <div class="item"
+        data-name="Malteada de chocolate"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/malteada.jpg">
+
+        <div class="item-image">
+          <img src="img/malteada.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Malteada choco</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Malteada de Fresa"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/malteada2.jpg">
+
+        <div class="item-image">
+          <img src="img/malteada2.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Malteada de fresa</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Malteada de Vainilla"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/malteada3.jpg">
+
+        <div class="item-image">
+          <img src="img/malteada3.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Malteada Vainilla</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Malteada de Oreo"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/malteada4.jpg">
+
+        <div class="item-image">
+          <img src="img/malteada4.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Malteada de Oreo</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+    </section>
+
+
+<!-- BREAKFAST -->
+    <section id="helados" class="section">
+      <h2>helados menu</h2>
+
+      <div class="item"
+        data-name="Helado de Vainilla"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/helado.jpg">
+
+        <div class="item-image">
+          <img src="img/helado.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Helado de Vainilla</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Helados de chocolate"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/helado2.jpg">
+
+        <div class="item-image">
+          <img src="img/helado2.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Helado chocolate</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Helado de fresa"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/helado3.jpg">
+
+        <div class="item-image">
+          <img src="img/helado3.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Helado de fresa</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+	  
+	  <div class="item"
+        data-name="Helado de platano"
+        data-description="Waffle artesanal con fresas, frutos rojos y helado."
+        data-price="24"
+        data-image="img/helado4.jpg">
+
+        <div class="item-image">
+          <img src="img/helado4.jpg" alt="Waffle">
+        </div>
+
+        <h3 class="item-title">Helado platano</h3>
+
+        <div class="divider"></div>
+
+        <div class="price">$24 MXN</div>
+
+        <p class="item-description">
+          Waffle artesanal con fresas, frutos rojos y helado.
+        </p>
+
+        <div class="item-social">
+          <span>📸</span>
+          <span>📘</span>
+        </div>
+
+        <button class="add-btn">?</button>
+      </div>
+    </section>
+
+
   </div>
-</a>
+
+</div>
+
+
+
 
 </section>
+<!-- OVERLAY -->
+<div class="overlay"></div>
+
+<!-- BOTTOM SHEET -->
+<div class="product-modal">
+  <div class="modal-content">
+
+    <div class="modal-top">
+      <div class="modal-social">
+        <a href="#">📸</a>
+        <a href="#">💬</a>
+      </div>
+
+      <button class="close-modal">✕</button>
+    </div>
+
+    <img id="modalImage" src="" alt="">
+
+    <div class="modal-info">
+      <h2 id="modalName"></h2>
+      <div class="modal-price" id="modalPrice"></div>
+      <p id="modalDescription"></p>
+    </div>
+
+  </div>
+</div>
+<!-- CART BAR -->
+<div class="cart-bar">
+  <div class="cart-images"></div>
+
+  <div class="cart-info">
+    <span id="cartCount">0 productos</span>
+    <span id="cartTotal">0$</span>
+  </div>
+
+  <button id="goToCart" class="go-cart">Ver carrito</button>
+</div>
+<div class="cart-sheet" id="cartSheet">
+  <div class="cart-sheet-header">
+    <span>Tu carrito</span>
+    <button id="closeCart">✕</button>
+  </div>
+
+  <div class="cart-sheet-content" id="cartSheetContent">
+    <!-- Aquí se insertan productos dinámicamente -->
+  </div>
+  <div class="cart-whatsapp">
+  <div class="cart-total">
+    Total: <span id="sheetTotal">0$</span>
+  </div>
+
+  <button id="generateOrder">Generar código</button>
+</div>
+
+</div>
+<!-- CONFIRM ORDER MODAL -->
+<div class="confirm-modal" id="confirmModal">
+
+  <div class="confirm-content">
+
+    <h3>Confirmar pedido</h3>
+
+    <div id="confirmItems"></div>
+
+    <div class="confirm-total">
+      Total: <span id="confirmTotal">0$</span>
+    </div>
+
+    <div class="confirm-buttons">
+      <button id="cancelConfirm">Cancelar</button>
+      <button id="confirmSend">Confirmar</button>
+    </div>
+
+  </div>
+</div>
 
 
+<script src="script.js"></script>
 </body>
 </html>
-``
